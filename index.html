@@ -62,7 +62,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft JhengHei",sans-seri
 <body>
 <div class="topbar">
   <h1>展售出席行事曆</h1>
-  <span class="sub">2026年4月 – 2026年5月 &nbsp;·&nbsp; 更新：2026/4/25</span>
+  <span class="sub">2026年5月 &nbsp;·&nbsp; 更新：2026/4/27</span>
 </div>
 <div class="main">
   <div class="cal-nav">
@@ -82,93 +82,71 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft JhengHei",sans-seri
   <div class="detail-box" id="detail-box" style="display:none"></div>
 </div>
 <script>
-var DATA = {"brands": [{"id": "B0177", "name": "蔬果讚", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0121", "name": "曾脆芭樂", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西螺服務區-南站", "short": "西螺", "zone": "xiluo"}, {"id": "B0115", "name": "一品田農場", "location": "南投服務區", "short": "南投", "zone": "nantou"}, {"id": "B0121", "name": "曾脆芭樂", "location": "關西服務區-大車", "short": "關西", "zone": "kwanshi"}, {"id": "B0128", "name": "宗哥草莓園", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0128", "name": "宗哥草莓園", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0120", "name": "七彩紅龍果園", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0137", "name": "日生蜂園", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0125", "name": "永豐農場", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0130", "name": "福伯旺來", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0129", "name": "農津赫", "location": "東草屯休息站", "short": "東草", "zone": "dongcao"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西螺服務區-北站", "short": "西螺", "zone": "xiluo"}, {"id": "B0181", "name": "青農派對", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0131", "name": "一畝好田", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0180", "name": "蜂情蜜意市集", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}], "attendance": {"2026-04": {"B0177_西湖服務區": [3, 4, 5, 6, 11, 12, 25, 26], "B0121_西湖服務區": [3, 4, 5, 6, 10, 11, 12, 17, 18, 19, 24, 25, 26], "B0121_關西服務區": [3, 4, 5, 6, 10, 11, 12, 17, 18, 19, 24, 25, 26], "B0121_西螺服務區-南站": [3, 4, 5, 6, 10, 11, 12, 17, 18, 19, 24, 25, 26], "B0115_南投服務區": [3, 4, 5, 6, 11, 12, 18, 19, 25, 26], "B0121_關西服務區-大車": [3, 4, 5, 6, 11, 12, 18, 19, 25, 26], "B0128_關西服務區": [3, 4, 5, 6, 10, 11, 12, 17, 18, 19, 24, 25, 26], "B0128_西湖服務區": [3, 4, 5, 6], "B0120_西湖服務區": [4, 5, 11, 12, 18, 19, 25, 26], "B0137_關西服務區": [10, 11, 12, 17, 18, 19], "B0125_關西服務區": [3, 4, 5, 6, 10, 11, 12, 17, 18, 19, 24, 25, 26], "B0130_關西服務區": [17, 18, 19, 24, 25, 26], "B0129_東草屯休息站": [11, 12, 25, 26]}, "2026-05": {"B0115_南投服務區": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0125_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西湖服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西螺服務區-南站": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西螺服務區-北站": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0121_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_關西服務區-大車": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0128_關西服務區": [1, 2, 3, 9, 10, 15, 16], "B0120_西湖服務區": [2, 3, 9, 10], "B0137_關西服務區": [8, 9, 10], "B0181_關西服務區": [1, 2, 3], "B0131_關西服務區": [23, 24, 30, 31], "B0130_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0180_關西服務區": [1, 2, 3, 4], "B0177_西湖服務區": [2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0129_東草屯休息站": [9, 10, 16, 17]}}};
-
-var START_NUM = 202604;
+var DATA = {"brands": [{"id": "B0177", "name": "蔬果讚", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0121", "name": "曾脆芭樂", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西螺服務區-南站", "short": "西螺", "zone": "xiluo"}, {"id": "B0115", "name": "一品田農場", "location": "南投服務區", "short": "南投", "zone": "nantou"}, {"id": "B0121", "name": "曾脆芭樂", "location": "關西服務區-大車", "short": "關西", "zone": "kwanshi"}, {"id": "B0128", "name": "宗哥草莓園", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0128", "name": "宗哥草莓園", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0120", "name": "七彩紅龍果園", "location": "西湖服務區", "short": "西湖", "zone": "sihu"}, {"id": "B0137", "name": "日生蜂園", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0125", "name": "永豐農場", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0130", "name": "福伯旺來", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0129", "name": "農津赫", "location": "東草屯休息站", "short": "東草", "zone": "dongcao"}, {"id": "B0121", "name": "曾脆芭樂", "location": "西螺服務區-北站", "short": "西螺", "zone": "xiluo"}, {"id": "B0181", "name": "青農派對", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0131", "name": "一畝好田", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}, {"id": "B0180", "name": "蜂情蜜意市集", "location": "關西服務區", "short": "關西", "zone": "kwanshi"}], "attendance": {"2026-05": {"B0115_南投服務區": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0125_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西湖服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西螺服務區-南站": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_西螺服務區-北站": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0121_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0121_關西服務區-大車": [1, 2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0128_關西服務區": [1, 2, 3, 9, 10, 15, 16], "B0120_西湖服務區": [2, 3, 9, 10], "B0137_關西服務區": [8, 9, 10], "B0181_關西服務區": [1, 2, 3], "B0131_關西服務區": [23, 24, 30, 31], "B0130_關西服務區": [1, 2, 3, 8, 9, 10, 15, 16, 17, 22, 23, 24, 29, 30, 31], "B0180_關西服務區": [1, 2, 3, 4], "B0177_西湖服務區": [2, 3, 9, 10, 16, 17, 23, 24, 30, 31], "B0129_東草屯休息站": [9, 10, 16, 17]}}};
+var START_NUM = 202605;
 var END_NUM   = 202605;
-
 var ZONE_ORDER = ["kwanshi","sihu","nantou","dongcao","xiluo","default"];
 var ZONE_NAMES = {kwanshi:"關西",sihu:"西湖",nantou:"南投",dongcao:"東草屯",xiluo:"西螺","default":"其他"};
 var ZONE_KW    = {kwanshi:["關西"],sihu:["西湖"],nantou:["南投"],dongcao:["東草","東草屯"],xiluo:["西螺"]};
-
-var curYear = 2026, curMonth = 4, selectedDay = null;
-var today = new Date();
-
-function detectZone(loc){
-  for(var z in ZONE_KW){ if(ZONE_KW[z].some(function(k){return loc.indexOf(k)>=0;})) return z; }
-  return "default";
-}
-function bkey(b){ return b.id+"_"+b.location; }
-function mk(){ return curYear+"-"+(curMonth<10?"0":"")+curMonth; }
-function curNum(){ return curYear*100+curMonth; }
-function zoneClass(b){ return "z-"+(b.zone||detectZone(b.location)); }
-function label(b){ var s=b.short||b.location.slice(0,2); return s+"·"+b.name.slice(0,2); }
-
+var curYear=2026,curMonth=5,selectedDay=null;
+var today=new Date();
+function detectZone(loc){for(var z in ZONE_KW){if(ZONE_KW[z].some(function(k){return loc.indexOf(k)>=0;}))return z;}return"default";}
+function bkey(b){return b.id+"_"+b.location;}
+function mk(){return curYear+"-"+(curMonth<10?"0":"")+curMonth;}
+function curNum(){return curYear*100+curMonth;}
+function zoneClass(b){return"z-"+(b.zone||detectZone(b.location));}
+function label(b){var s=b.short||b.location.slice(0,2);return s+"·"+b.name.slice(0,2);}
 function getDayBrands(d){
-  var m=DATA.attendance[mk()]; if(!m) return [];
-  return DATA.brands
-    .filter(function(b){ return (m[bkey(b)]||[]).indexOf(d)>=0; })
-    .sort(function(a,b){ return ZONE_ORDER.indexOf(a.zone||"default")-ZONE_ORDER.indexOf(b.zone||"default"); });
+  var m=DATA.attendance[mk()];if(!m)return[];
+  return DATA.brands.filter(function(b){return(m[bkey(b)]||[]).indexOf(d)>=0;})
+    .sort(function(a,b){return ZONE_ORDER.indexOf(a.zone||"default")-ZONE_ORDER.indexOf(b.zone||"default");});
 }
-function getMonOffset(y,mo){ var dow=new Date(y,mo-1,1).getDay(); return (dow+6)%7; }
-
+function getMonOffset(y,mo){var dow=new Date(y,mo-1,1).getDay();return(dow+6)%7;}
 function updateNavBtns(){
   var cn=curNum();
-  document.getElementById("btn-py").disabled = cn<=START_NUM;
-  document.getElementById("btn-pm").disabled = cn<=START_NUM;
-  document.getElementById("btn-nm").disabled = cn>=END_NUM;
-  document.getElementById("btn-ny").disabled = cn>=END_NUM;
+  document.getElementById("btn-py").disabled=cn<=START_NUM;
+  document.getElementById("btn-pm").disabled=cn<=START_NUM;
+  document.getElementById("btn-nm").disabled=cn>=END_NUM;
+  document.getElementById("btn-ny").disabled=cn>=END_NUM;
 }
-
 function renderLegend(){
-  var lg=document.getElementById("legend"); lg.innerHTML="";
-  var used=new Set(DATA.brands.map(function(b){ return b.zone||detectZone(b.location); }));
+  var lg=document.getElementById("legend");lg.innerHTML="";
+  var used=new Set(DATA.brands.map(function(b){return b.zone||detectZone(b.location);}));
   ZONE_ORDER.forEach(function(z){
-    if(!used.has(z)) return;
-    var el=document.createElement("div");
-    el.className="legend-item z-"+z;
-    el.textContent=ZONE_NAMES[z];
-    lg.appendChild(el);
+    if(!used.has(z))return;
+    var el=document.createElement("div");el.className="legend-item z-"+z;el.textContent=ZONE_NAMES[z];lg.appendChild(el);
   });
 }
-
 function renderCal(){
   var months=["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
   document.getElementById("cal-title").textContent=curYear+"年 "+months[curMonth-1];
-  renderLegend(); updateNavBtns();
-  var grid=document.getElementById("cal-grid"); grid.innerHTML="";
+  renderLegend();updateNavBtns();
+  var grid=document.getElementById("cal-grid");grid.innerHTML="";
   var offset=getMonOffset(curYear,curMonth);
   var dim=new Date(curYear,curMonth,0).getDate();
   var isCur=today.getFullYear()===curYear&&today.getMonth()+1===curMonth;
-
-  for(var i=0;i<offset;i++){
-    var e=document.createElement("div"); e.className="cal-day empty"; grid.appendChild(e);
-  }
+  for(var i=0;i<offset;i++){var e=document.createElement("div");e.className="cal-day empty";grid.appendChild(e);}
   for(var d=1;d<=dim;d++){
     var dow=(offset+d-1)%7;
     var cell=document.createElement("div");
     cell.className="cal-day"+(isCur&&d===today.getDate()?" today":"")+(d===selectedDay?" selected":"");
     var dn=document.createElement("div");
     dn.className="day-num"+(dow>=5?" we":"");
-    dn.textContent=d; cell.appendChild(dn);
+    dn.textContent=d;cell.appendChild(dn);
     getDayBrands(d).forEach(function(b){
-      var t=document.createElement("span");
-      t.className="vtag "+zoneClass(b);
-      t.textContent=label(b); cell.appendChild(t);
+      var t=document.createElement("span");t.className="vtag "+zoneClass(b);t.textContent=label(b);cell.appendChild(t);
     });
-    (function(day){ cell.addEventListener("click",function(){ selectDay(day); }); })(d);
+    (function(day){cell.addEventListener("click",function(){selectDay(day);});})(d);
     grid.appendChild(cell);
   }
-  if(selectedDay) renderDetail(selectedDay);
+  if(selectedDay)renderDetail(selectedDay);
 }
-
 function selectDay(d){
-  selectedDay=d; renderCal(); renderDetail(d);
-  setTimeout(function(){ document.getElementById("detail-box").scrollIntoView({behavior:"smooth",block:"nearest"}); },50);
+  selectedDay=d;renderCal();renderDetail(d);
+  setTimeout(function(){document.getElementById("detail-box").scrollIntoView({behavior:"smooth",block:"nearest"});},50);
 }
-
 function renderDetail(d){
-  var box=document.getElementById("detail-box"); box.style.display="block";
+  var box=document.getElementById("detail-box");box.style.display="block";
   var dayBrands=getDayBrands(d);
   var dowN=["日","一","二","三","四","五","六"];
   var dow=new Date(curYear,curMonth-1,d).getDay();
@@ -176,36 +154,27 @@ function renderDetail(d){
   var h=document.createElement("h3");
   h.textContent=curMonth+"月"+d+"日（"+dowN[dow]+"）共 "+dayBrands.length+" 家";
   box.appendChild(h);
-  var chips=document.createElement("div"); chips.className="chips";
-  if(dayBrands.length===0){
-    chips.innerHTML="<span style='font-size:12px;color:#999'>此日無出席廠商</span>";
-  }
+  var chips=document.createElement("div");chips.className="chips";
+  if(dayBrands.length===0){chips.innerHTML="<span style='font-size:12px;color:#999'>此日無出席廠商</span>";}
   dayBrands.forEach(function(b){
-    var c=document.createElement("div");
-    c.className="chip "+zoneClass(b);
-    c.textContent=b.name+"・"+b.location;
-    chips.appendChild(c);
+    var c=document.createElement("div");c.className="chip "+zoneClass(b);c.textContent=b.name+"・"+b.location;chips.appendChild(c);
   });
   box.appendChild(chips);
 }
-
 function changeYear(delta){
-  var ny=curYear+delta, nm=curMonth, nn=ny*100+nm;
-  if(nn<START_NUM){ ny=Math.floor(START_NUM/100); nm=START_NUM%100; }
-  if(nn>END_NUM){   ny=Math.floor(END_NUM/100);   nm=END_NUM%100; }
-  curYear=ny; curMonth=nm; selectedDay=null;
-  document.getElementById("detail-box").style.display="none"; renderCal();
+  var ny=curYear+delta,nm=curMonth,nn=ny*100+nm;
+  if(nn<START_NUM){ny=Math.floor(START_NUM/100);nm=START_NUM%100;}
+  if(nn>END_NUM){ny=Math.floor(END_NUM/100);nm=END_NUM%100;}
+  curYear=ny;curMonth=nm;selectedDay=null;document.getElementById("detail-box").style.display="none";renderCal();
 }
 function changeMonth(delta){
-  var nm=curMonth+delta, ny=curYear;
-  if(nm>12){nm=1;ny++;} if(nm<1){nm=12;ny--;}
+  var nm=curMonth+delta,ny=curYear;
+  if(nm>12){nm=1;ny++;}if(nm<1){nm=12;ny--;}
   var nn=ny*100+nm;
-  if(nn<START_NUM){ ny=Math.floor(START_NUM/100); nm=START_NUM%100; }
-  if(nn>END_NUM){   ny=Math.floor(END_NUM/100);   nm=END_NUM%100; }
-  curYear=ny; curMonth=nm; selectedDay=null;
-  document.getElementById("detail-box").style.display="none"; renderCal();
+  if(nn<START_NUM){ny=Math.floor(START_NUM/100);nm=START_NUM%100;}
+  if(nn>END_NUM){ny=Math.floor(END_NUM/100);nm=END_NUM%100;}
+  curYear=ny;curMonth=nm;selectedDay=null;document.getElementById("detail-box").style.display="none";renderCal();
 }
-
 renderCal();
 </script>
 </body>
